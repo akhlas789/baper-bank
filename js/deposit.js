@@ -9,5 +9,13 @@ document.getElementById('btn-deposit').addEventListener('click',function(){
     const currentDepositTotal = newDepositAmount + PreviusDepositTotal
     depositTotalElement.innerText = currentDepositTotal
 
+    const depositToatalElement = document.getElementById('balance-total')
+    const previusBalanceTotalString = depositToatalElement.innerText
+    const previusBalanceTotal = parseFloat(previusBalanceTotalString)
+    
+    const currentBlanceTotal = previusBalanceTotal + newDepositAmount;
+    depositToatalElement.innerText = currentBlanceTotal
+
+
     depositFild.value = ''
 })
